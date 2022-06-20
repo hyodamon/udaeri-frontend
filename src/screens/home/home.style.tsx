@@ -42,3 +42,11 @@ export const MiddleBlock = {
     flex-wrap: wrap;
   `,
 };
+
+export const BottomBlock = {
+  Container: styled.View`
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  `
+}

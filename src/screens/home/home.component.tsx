@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Header, MiddleBlock } from "./Home.style";
+import { Container, Header, MiddleBlock, BottomBlock } from "./Home.style";
 import { LongBtn } from "../../components/longBtn/longBtn.component";
 import { HomeJjimEle } from "../../components/home-jjimEle/home-jjimEle.component";
 import SafeAreaViewComp from "../../components/safeAreaViewComp/safeAreaViewComp";
@@ -76,8 +76,9 @@ const Home = (): JSX.Element => {
             </MiddleBlock.CatWrap>
             <LongBtn btnTitle="지도로 보기" pageTitle="Map" />
           </MiddleBlock.Container>
-
-          <HomeJjimEle></HomeJjimEle>
+          <BottomBlock.Container>
+            <HomeJjimEle categoryTitle="먹거리" shopName="맛사랑"></HomeJjimEle>
+          </BottomBlock.Container>
         </Container>
       </ScrollView>
     </SafeAreaViewComp>

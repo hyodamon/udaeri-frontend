@@ -2,13 +2,11 @@ import styled from "styled-components/native";
 import theme from "../../style/theme";
 
 export const JjimContainer = styled.TouchableOpacity`
-  width: ${theme.width * 0.35}px;
-  height: ${theme.width * 0.35}px;
+  width: ${theme.width * 0.85}px;
+  height: ${theme.width * 0.4}px;
   background-color: ${theme.colors.BGColor1};
-  margin-right: 15px;
-  border-radius: 20px;
-  padding: 10px 10px 15px 10px;
-  display: flex;
+  border-radius: 10px;
+  padding: 10px 10px 15px 15px;
   justify-content: space-around;
 `;
 

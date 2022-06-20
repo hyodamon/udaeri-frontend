@@ -7,12 +7,13 @@ import {
   ShopName,
   TextContainer,
 } from "./home-jjimEle.style";
-import Ionicons from "react-native-vector-icons/Ionicons";
-import Feather from "react-native-vector-icons/Feather";
 
-export const HomeJjimEle = (props): JSX.Element => {
-  const { categoryTitle, shopName } = props;
+interface Props {
+  categoryTitle : string;
+  shopName : string;
+}
 
+export const HomeJjimEle = ({ categoryTitle, shopName } : Props): JSX.Element => {
   const navigation = useNavigation();
   const movePage = useCallback(
     () => navigation.navigate(shopName, { key: shopName }),
