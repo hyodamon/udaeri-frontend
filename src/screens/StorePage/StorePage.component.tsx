@@ -13,7 +13,7 @@ const StorePage = (): JSX.Element => {
       <Container>
         <HeaderBar left={true} title={curStore} center={false}></HeaderBar>
         <Content>
-          <StoreTapNavigator />
+          <StoreTapNavigator curStore={curStore} />
         </Content>
       </Container>
     </SafeAreaViewComp>

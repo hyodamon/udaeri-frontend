@@ -46,14 +46,13 @@ const SNSLoginBar = ({ id, moveScreen }: Props) => {
 
   const getKakaoProfile = async (): Promise<void> => {
     const profile = await getProfile();
-    setUserId(profile.id);
-    PostAccessCode();
+    PostAccessCode(profile.id);
   };
 
-  const PostAccessCode = async () => {
+  const PostAccessCode = async (id: string) => {
     axios
       .post("/oauth", {
-        id: userID,
+        id: id,
         platform: "kakao",
       })
       .then((res) => {

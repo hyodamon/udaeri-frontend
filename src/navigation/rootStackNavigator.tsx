@@ -9,6 +9,7 @@ import MiddleCat from "../screens/MiddleCat/MiddleCat.component";
 import LoginPage from "../screens/LoginPage/LoginPage.component";
 import StoreList from "../screens/StoreList/StoreList.component";
 import StorePage from "../screens/StorePage/StorePage.component";
+import Random from "../screens/Random/Random.component";
 import { TOKEN_KEY } from "../utils/aboutToken";
 import { handleLogin } from "../store/slice/userSlice";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -20,6 +21,7 @@ export type RootStackParamList = {
   MiddleCat: undefined;
   StoreList: undefined;
   StorePage: undefined;
+  Random: undefined;
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();
@@ -54,6 +56,7 @@ const RootNavigator = (): JSX.Element => {
               component={BottomNavigator}
             />
             <RootStack.Screen name="Map" component={Map} />
+            <RootStack.Screen name="Random" component={Random} />
             <RootStack.Screen name="MiddleCat" component={MiddleCat} />
             <RootStack.Screen name="StoreList" component={StoreList} />
             <RootStack.Screen name="StorePage" component={StorePage} />

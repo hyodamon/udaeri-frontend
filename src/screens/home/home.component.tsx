@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Header, MiddleBlock, BottomBlock } from "./Home.style";
+import { Container, Header, MiddleBlock, BottomBlock } from "./home.style";
 import { LongBtn } from "../../components/longBtn/longBtn.component";
 import { HomeJjimEle } from "../../components/home-jjimEle/home-jjimEle.component";
 import SafeAreaViewComp from "../../components/safeAreaViewComp/safeAreaViewComp";
@@ -28,7 +28,7 @@ const categoryList = [
     icon: PlayIcon,
   },
   {
-    name: "카페/빵집",
+    name: "카페",
     icon: CafeIcon,
   },
   {
@@ -48,7 +48,7 @@ const categoryList = [
     icon: SalonIcon,
   },
   {
-    name: "병원",
+    name: "랜덤뽑기",
     icon: HospitalIcon,
   },
 ];

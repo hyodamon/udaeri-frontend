@@ -19,13 +19,26 @@ const LargeCatEle = ({ name, icon }: Props): JSX.Element => {
     dispatch(setCurLargeCat(name));
     navigation.navigate("MiddleCat", { catName: name });
   };
+  const onMoveRandom = () => {
+    navigation.navigate("Random");
+  }
   return (
-    <Container onPress={onMove}>
-      <Thumbnail>
-        <SvgXml xml={icon} width="24px" height="24px" fill="#ffffff" />
-      </Thumbnail>
-      <CatTitle>{name}</CatTitle>
-    </Container>
+    name === "랜덤뽑기" ? (
+      <Container onPress={onMoveRandom}>
+        <Thumbnail>
+          <SvgXml xml={icon} width="24px" height="24px" fill="#ffffff" />
+        </Thumbnail>
+        <CatTitle>{name}</CatTitle>
+      </Container>
+    ) : ( 
+      <Container onPress={onMove}>
+        <Thumbnail>
+          <SvgXml xml={icon} width="24px" height="24px" fill="#ffffff" />
+        </Thumbnail>
+        <CatTitle>{name}</CatTitle>
+      </Container>
+    )
+  
   );
 };
 

@@ -36,16 +36,9 @@ const StoreReviewTab = () : JSX.Element => {
             token = result;
         });
         axios
-            .get("/l-categories/" + curLargeCat + "/m-categories/" + curMidCat + "/stores/" + curStore + "/review",
-                {
-                    headers: {
-                        Authorization: token,
-                    },
-                    body: { "order_type": "최신순" }
-                }
-            )
+            .get("/l-categories/" + curLargeCat + "/m-categories/" + curMidCat + "/stores/" + curStore + "/review")
             .then((res) => {
-                //console.log("이미 썼는가? :", res.data.isWrited);
+                console.log("이미 썼는가? :", res.data.isWrited);
                 if (res.data.success) {
                     setMyReview(res.data.myReview);
                     setStoreReview(res.data.list);
@@ -74,7 +67,6 @@ const StoreReviewTab = () : JSX.Element => {
 
     const scoreAvg : number = (scoreSum / storeReview.length).toFixed(1); // 평균 별점
     const totalScore : number = scoreDist.reduce((a, b) => a + b);
-
     return (
         <Container>
             <ScoreContainer>
